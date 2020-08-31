@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Bebas Neue', cursive;
+}
+
+body {
+    min-height: 100vh;
+}
+
+button {
+    border: solid 1px rgb(243, 74, 74);
+    cursor: pointer;
+    padding: 20px;
+    &:hover {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+}
+
+button, 
+button:active, 
+button:focus,
+textarea:active,
+textarea:focus,
+input:active,
+input:focus {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.homepage_container {
+    width: 100%;
+    text-align: center;
+    font-size: 42px;
+    padding-top: 140px
+}
+
+.toHome-btn {
+    margin: 0px 10px 10px 0;
+}
+
+img {
+    object-fit: contain;
+}
