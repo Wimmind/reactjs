@@ -1,19 +1,19 @@
 const dataImage = [
     {
         id: 1,
-        name: 'winter'
+        src: process.env.PUBLIC_URL + `/image/winter.jpg`
     },
     {
         id: 2,
-        name: 'spring'
+        src: process.env.PUBLIC_URL + `/image/spring.jpg`
     },
     {
         id: 3,
-        name: 'summer'
+        src: process.env.PUBLIC_URL + `/image/summer.jpg`
     },
     {
         id: 4,
-        name: 'autumn'
+        src: process.env.PUBLIC_URL + `/image/autumn.jpg`
     },
 ];
 

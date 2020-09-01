@@ -2,12 +2,11 @@ import React, {Component} from 'react';
 import AwesomeSlider from 'react-awesome-slider';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+
 import store from './store';
 import Switch from "react-switch";
+
 import dataImage from './dataImage';
-
-
-//import dataImage from './dataImage';
 import serviceImage from './serviceImage';
 
 class SliderPage extends Component {
@@ -44,26 +43,25 @@ class SliderPage extends Component {
           height={20}
           width={48}/>
         <AwesomeSlider>
-       {this.props.imageList.imageList.map(image=>(
-         <div key={`${image.id}`}>
-           <img src={process.env.PUBLIC_URL + `/image/${image.name}.jpg`} alt="img"></img>
-         </div>
-       ))}
-      </AwesomeSlider>
+          {this.props.imageList.map(image=>(
+            <div key={`${image.id}`}>
+              <img src={image.src} alt="img" ></img>
+            </div>
+          ))}
+        </AwesomeSlider>
       </>
     );
   }
 }
 
 const mapStateToProps = (state) => {
-  return {
-    imageList: state
-  }
+  return state
 }
+
 const mapDispatchToProps = (dispatch) => {
   return {
       changeParams: (nameField, type) => {
-          dispatch(changeParams(nameField, type))
+        dispatch(changeParams(nameField, type))
       }
   }
 }
@@ -72,8 +70,8 @@ const changeParams = (type, value) => {
   return {
       type: 'toggleImages',
       payload: {
-          type,
-          value
+        type,
+        value
       }
   }
 }
